@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Казино - Выберите число</title>
+</head>
+<body>
+    <div class="info">
+        <div>Ваш баланс: {{ balance }}$</div>
+        <div>Ваша ставка: {{ bet_amount }}$</div>
+    </div>
+    <h1>Выберите число от 1 до 36</h1>
+    <form method="POST" action="/play">
+        <div class="numbers">
+
+            <input type="number" name="number" min="1" max="36" required placeholder="Выберите число">
+            <button type="submit">Выбрать</button>
+                
+        
+        </div>
+    </form>
+</body>
+</html>

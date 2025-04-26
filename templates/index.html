@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Казино - Сделайте ставку</title>
+</head>
+<body>
+    <div class="balance">Ваш баланс: {{ balance }}$</div>
+    <h1>Сделайте ставку</h1>
+    <form method="POST" action="/place_bet">
+        <input type="number" name="bet_amount" min="1" max="{{ balance }}" required placeholder="Сумма ставки">
+        <button type="submit">Сделать ставку</button>
+    </form>
+</body>
+</html>
+

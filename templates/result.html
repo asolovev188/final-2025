@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Казино - Результат</title>
+ 
+</head>
+<body>
+    <div class="info">
+        <div>Ваш баланс: {{ balance1 }}$</div>
+        <div>Вы выбрали: {{ selected_number }}</div>
+        <div>Выпало число: {{ winning_number }}</div>
+    </div>
+    
+    <div class="result {{ result }}">{{ message }}</div>
+    
+    <form action="/">
+        <button type="submit">Играть снова</button>
+    </form>
+</body>
+</html>
