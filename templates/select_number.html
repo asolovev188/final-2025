@@ -2,18 +2,21 @@
 <html>
 <head>
     <title>Казино - Выберите число</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
 </head>
 <body>
     <div class="info">
-        <div>Ваш баланс: {{ balance }}$</div>
-        <div>Ваша ставка: {{ bet_amount }}$</div>
+        <h1 class="b-radius2">Выберите число от 1 до 36</h1>
+        <div class="balance">Ваш баланс: {{ balance }}$</div>
+        <div class="balance">Ваша ставка: {{ bet_amount }}$</div>
     </div>
-    <h1>Выберите число от 1 до 36</h1>
+    
     <form method="POST" action="/play">
         <div class="numbers">
 
-            <input type="number" name="number" min="1" max="36" required placeholder="Выберите число">
-            <button type="submit">Выбрать</button>
+            <input type="number" name="number" min="1" max="36" required placeholder="Выберите число" class="box">
+            <button type="submit" class="box">Выбрать</button>
                 
         
         </div>

@@ -9,6 +9,7 @@ def index():
 
     session['balance'] = 5000000000
     return render_template('index.html', balance=session['balance'])
+    
 
 @app.route('/place_bet', methods=['POST'])
 def place_bet():
@@ -39,7 +40,7 @@ def play():
     
     if selected_number == winning_number:
         win_amount = session['bet_amount'] * 36
-        session['balance1']=session['balance'] + win_amount
+        session['balance'] + win_amount
         result = 'win'
         message = f"Поздравляем! Вы выиграли {win_amount}$!"
     else:
@@ -47,12 +48,17 @@ def play():
         message = "К сожалению, вы проиграли."
     
     return render_template('result.html', 
-                         balance=session['balance1'],
+                         balance=session['balance'],
                          message=message,
                          result=result,
                          selected_number=selected_number,
                          winning_number=winning_number,
                          bet_amount=session['bet_amount'])
+@app.route('/gg', methods=['POST'])
+def index1():
+
+    session['balance1'] = session['balance']
+    return render_template('index1.html', balance=session['balance1'])
 
 if __name__ == '__main__':
     app.run(debug=True)

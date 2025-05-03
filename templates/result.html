@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
     <title>Казино - Результат</title>
  
 </head>
 <body>
+    <h1 class="b-radius2">{{ message }}</h1>
     <div class="info">
-        <div>Ваш баланс: {{ balance1 }}$</div>
-        <div>Вы выбрали: {{ selected_number }}</div>
-        <div>Выпало число: {{ winning_number }}</div>
+        <div class="balance">Ваш баланс: {{ balance }}$</div>
+        <div class="balance">Вы выбрали: {{ selected_number }}</div>
+        <div class="balance">Выпало число: {{ winning_number }}</div>
     </div>
     
-    <div class="result {{ result }}">{{ message }}</div>
     
-    <form action="/">
-        <button type="submit">Играть снова</button>
+    
+    <form method="POST" action="gg">
+        <button type="submit" class="box">Играть снова</button>
     </form>
 </body>
 </html>
