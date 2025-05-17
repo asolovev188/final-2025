@@ -33,14 +33,14 @@ def select_number():
 @app.route('/play', methods=['POST'])
 def play():
     selected_number = int(request.form['number'])
-    winning_number = random.randint(1, 36)
+    winning_number = random.randint(1,36)
     
     session['selected_number'] = selected_number
     session['winning_number'] = winning_number
     
     if selected_number == winning_number:
         win_amount = session['bet_amount'] * 36
-        session['balance'] + win_amount
+        session['balance']=session['balance'] + win_amount
         result = 'win'
         message = f"Поздравляем! Вы выиграли {win_amount}$!"
     else:

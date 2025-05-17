@@ -1,10 +1,15 @@
+body {
+    font-family: sans-serif;
+    background-color: #81d4fa;
+    font-weight: bold;
+}
 .b-radius2 {
     font-family: 'Comfortaa', cursive;
     border:4px double gainsboro;
     padding:25px;
     border-radius: 50px 50px;
-    background-color: rgb(255, 140, 0);
-    color:rgb(80, 41, 41);
+    background: #0B63F6;
+    color:white;
     text-align: center
      }
 .balance{
@@ -14,10 +19,39 @@
 }
 
 
-.box {
+
+
+  .btn-new {
+    border-radius: 10px;
+    color: white;
+    transition: .2s linear;
+    background: #0B63F6;
     font-size: 23px;
     display: flex;
     align-items: flex-start;
     justify-self: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.btn-new:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #3C82F8;
+}
+
+.box{
+    padding: 10px;
+    border: 3px solid #0B63F6;
+    border-radius: 4px;
+    font-size: 23px;
+    display: flex;
+    align-items: flex-start;
+    justify-self: center;
+    font-family: 'Comfortaa', cursive;
+    
   }
   
+  .box:focus {
+    border-color: #0B63F6;
+  }
+.nameeee{
+    font-size: 23px;
+}
